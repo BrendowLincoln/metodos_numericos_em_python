@@ -19,15 +19,9 @@ def newton(a, error, derivativeDelta, times, f):
         '''
         DERIVADA NUMERICA
 
+        
+        '''
         derivative = calcNumericDerivate(x0, derivativeDelta, f)
-        '''
-        
-        
-        '''
-        DERIVADA CONHECIDA USADA PARA PROVA REAL
-        '''   
-        
-        derivative = 7 * pow(x0, 6)
         
         '''
         Calculando a imagem de a
@@ -49,7 +43,7 @@ def newton(a, error, derivativeDelta, times, f):
         count = (i + 1)
         
 
-        if fX0 <= error:
+        if abs(fX0) <= error:
             statusMessage = "Finalizar"
             print("| ", count ,"\t|", "%.4f" % x0 ,"\t| ", "%.4f" % fX0 ,"\t| ", "%.4f" % x1 ,"\t| ", statusMessage ,"\t|")
 

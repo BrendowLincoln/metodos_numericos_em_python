@@ -5,7 +5,12 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 7) - 1000
+        return pow(value, 3) - 2 * value - 1
+    
+    def create_function(expression):
+        def func(x):
+            return eval(expression)
+        return func
     
     '''
     Variaveis
@@ -23,7 +28,10 @@ def main():
     '''
     while next:
 
+        expression = input("Digite a expressão numérica (use 'x' para a variavel e pode usar funções da biblioteca 'math'): ")
+
         try:
+            func = create_function(expression)
             a = float(input("Primeiro chute (Xk): "))
             error = float(input("Erro desejado: "))
             derivativeDelta = float(input("Delta da derivada: "))
@@ -41,7 +49,7 @@ def main():
     '''
     Chamando o método de newton
     '''
-    result = newton(a, error, derivativeDelta, times, f)
+    result = newton(a, error, derivativeDelta, times, func)
 
     print("\nRESULTADOS\n")
     print("A raiz da função é: ",  "%.4f" % result["root"])
