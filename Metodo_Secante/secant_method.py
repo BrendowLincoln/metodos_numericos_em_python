@@ -30,7 +30,7 @@ def secant(a, b, error, times, f):
         count = (i + 1)
         
 
-        if fX1 <= error:
+        if abs(fX1) <= error:
             statusMessage = "Finalizar"
             print("| ", count ,"\t|", "%.4f" % x0 ,"\t| ", "%.4f" % x1,"\t| ", "%.4f" % fX0 ,"\t| ", "%.4f" % fX1 ,"\t| ", "%.4f" % x2 ,"\t| ", statusMessage ,"\t|")
 
