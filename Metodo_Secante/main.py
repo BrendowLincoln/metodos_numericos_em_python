@@ -1,4 +1,4 @@
-from secant_method import *
+from secant_method_2 import *
 
 def main():
     '''
@@ -41,7 +41,11 @@ def main():
     '''
     Chamando o método da bissessao0
     '''
-    result = secant(a, b, error, times, f)
+    result = secant2(a, b, error, times, f)
+
+    for line in result["lines"]:
+
+        print("| ", line["count"] ,"\t|", "%.4f" % line["x0"] ,"\t| ", "%.4f" % line["x1"],"\t| ", "%.4f" % line["fX0"] ,"\t| ", "%.4f" % line["fX1"] ,"\t| ", "%.4f" % line["x2"] ,"\t| ",  line["statusMessage"] ,"\t|")
 
     for line in result["lines"]:
 
