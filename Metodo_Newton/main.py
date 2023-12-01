@@ -1,11 +1,13 @@
 from newton_method import *
+import math
 
 def main():
     '''
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 3) - 2 * value - 1
+        # return math.cos(value) - pow(value, 5)
+        return pow(value, 3) - (pow(value, 2)) + value + 1
     
     def create_function(expression):
         def func(x):
@@ -28,10 +30,7 @@ def main():
     '''
     while next:
 
-        expression = input("Digite a expressão numérica (use 'x' para a variavel e pode usar funções da biblioteca 'math'): ")
-
         try:
-            func = create_function(expression)
             a = float(input("Primeiro chute (Xk): "))
             error = float(input("Erro desejado: "))
             derivativeDelta = float(input("Delta da derivada: "))
@@ -49,12 +48,16 @@ def main():
     '''
     Chamando o método de newton
     '''
-    result = newton(a, error, derivativeDelta, times, func)
+    result = newton(a, error, derivativeDelta, times, f)
+
+    for line in result["lines"]:
+
+        print("| ", line["count"] ,"\t|", "%.4f" % line["x0"] ,"\t| ", "%.4f" % line["fX0"] ,"\t| ", "%.4f" % line["x1"] ,"\t| ", line["statusMessage"] ,"\t|")
 
     print("\nRESULTADOS\n")
     print("A raiz da função é: ",  "%.4f" % result["root"])
     print("O valor da imagem chegou no erro desejado: ", "%.4f" %  result["rootImage"])
-    print("Parou na interação: ", result["iterection"])
+    print("Parou na interação: ", result["finalIteraction"])
 
 
 if __name__ == "__main__":
