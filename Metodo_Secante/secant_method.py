@@ -1,4 +1,4 @@
-def secant2(a, b, error, times, f):
+def secant(a, b, error, times, f):
 
     BRUTE_FORCE_TIMES = times
 
