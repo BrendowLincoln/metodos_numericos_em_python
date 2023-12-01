@@ -8,47 +8,51 @@ def bissection(a, b, error, times, f):
     fX1 = 0.0
     fX2 = 0.0
     fAvg = 0.0
-    
+    lines = []
 
     for i in range(BRUTE_FORCE_TIMES):
-
-        '''
-        CALCULANDO A MEDIA
-        '''
+        # Calculando a média
         avg = (x1+x2)/2
 
-        '''
-        Calculando a imagem de a, b e a media
-        '''
+        # Calculando a imagem de a, b e a media
         fX1 = f(x1)
         fX2 = f(x2)
         fAvg = f(avg)
 
-
-        '''
-        Verifca se chegou a um resultado aceitavel
-        '''
-        statusMessage = ""
-
-        count = (i + 1)
         
+        # Verifca se chegou a um resultado aceitavel
+        count = (i + 1)
 
-        if fAvg >= (error * -1) and fAvg <= error:
-            statusMessage = "Finalizar"
-            print("| ", count ,"\t|", "%.4f" % x1 ,"\t| ", "%.4f" % avg,"\t| ", "%.4f" % x2 ,"\t| ", "%.4f" % fX1 ,"\t| ", "%.4f" % fAvg ,"\t| ", "%.4f" % fX2 ,"\t| ", statusMessage ,"\t|")
+        line = {
+            "count": count,
+            "x1": x1,
+            "avg": avg,
+            "x2": x2,
+            "fX1": fX1,
+            "fAvg": fAvg,
+            "fX2": fX2,
+            "statusMessage": ""
+        }
+        
+        if abs(fAvg) <= error:
 
-            return {"root": avg, "rootImage": fAvg, "iterection": count}
-        else:
-            statusMessage = "Continuar"
+            line["statusMessage"] = "Finalizar"
+            lines.append(line)
             
-            print("| ", count ,"\t|", "%.4f" % x1 ,"\t| ", "%.4f" % avg,"\t| ", "%.4f" % x2 ,"\t| ", "%.4f" % fX1 ,"\t| ", "%.4f" % fAvg ,"\t| ", "%.4f" % fX2 ,"\t| ", statusMessage ,"\t|")
-            
+            return {"lines": lines, "root": avg, "rootImage": fAvg, "finalIteraction": count}
+        else:                        
+
+            line["statusMessage"] = "Continuar"
+            lines.append(line)
+
+            # Caso não esteja válido, ele repassa o valor  f
+
             if isValidValues(x1, avg, f):
                 x2 = avg
             else:
                 x1 = avg
 
-            
+        
     
 
 

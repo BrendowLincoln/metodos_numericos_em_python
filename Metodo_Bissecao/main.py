@@ -6,7 +6,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 3) - 5 * value - 9
+        return pow(value, 3) - (pow(value, 2)) + value + 1
     
     '''
     Variaveis
@@ -53,10 +53,14 @@ def main():
     '''
     result = bissection(a, b, error, times, f)
 
+    for line in result["lines"]:
+
+        print("| ", line["count"] ,"\t|", "%.4f" % line["x1"] ,"\t| ", "%.4f" % line["avg"],"\t| ", "%.4f" % line["x2"] ,"\t| ", "%.4f" % line["fX1"] ,"\t| ", "%.4f" % line["fAvg"] ,"\t| ", "%.4f" % line["fX2"] ,"\t| ", line["statusMessage"] ,"\t|")
+
     print("\nRESULTADOS\n")
     print("A raiz da função é: ",  "%.4f" % result["root"])
     print("O valor da imagem chegou no erro desejado: ", "%.4f" %  result["rootImage"])
-    print("Parou na interação: ", result["iterection"])
+    print("Parou na interação: ", result["finalIteraction"])
 
 
 if __name__ == "__main__":
