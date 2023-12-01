@@ -1,4 +1,4 @@
-def secant(a, b, error, times, f):
+def secant2(a, b, error, times, f):
 
     BRUTE_FORCE_TIMES = times
 
@@ -7,6 +7,7 @@ def secant(a, b, error, times, f):
     x2 = 0.0
     fX0 = 0.0
     fX1 = 0.0
+    lines = []
 
     for i in range(BRUTE_FORCE_TIMES):
         
@@ -21,26 +22,34 @@ def secant(a, b, error, times, f):
         '''
         x2 = x1 - fX1 * ((x1 - x0)/(fX1 - fX0))
 
-
         '''
         Verifca se chegou a um resultado aceitavel
         '''
-        statusMessage = ""
 
         count = (i + 1)
+
+        line = {
+            "count": count,
+            "x0": x0,
+            "x1": x1,
+            "fX0": fX0,
+            "fX1": fX1,
+            "fX1": fX1,
+            "x2": x2,
+            "statusMessage": ""
+        }
         
 
         if abs(fX1) <= error:
-            statusMessage = "Finalizar"
-            print("| ", count ,"\t|", "%.4f" % x0 ,"\t| ", "%.4f" % x1,"\t| ", "%.4f" % fX0 ,"\t| ", "%.4f" % fX1 ,"\t| ", "%.4f" % x2 ,"\t| ", statusMessage ,"\t|")
 
-            return {"root": x1, "rootImage": fX1, "iterection": count}
+            line["statusMessage"] = "Finalizar"
+            lines.append(line)
+
+            return {"lines": lines, "root": x1, "rootImage": fX1, "finalIterection": count}
         else:
-            statusMessage = "Continuar"
+            line["statusMessage"] = "Continuar"
+            lines.append(line)
             
-            print("| ", count ,"\t|", "%.4f" % x0 ,"\t| ", "%.4f" % x1,"\t| ", "%.4f" % fX0 ,"\t| ", "%.4f" % fX1 ,"\t| ", "%.4f" % x2 ,"\t| ", statusMessage ,"\t|")
-            
-
             '''
             FAZENDO A PASSAGEM DOS VALORES PARA A PROXIMA INTERACAO
             '''
