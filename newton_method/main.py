@@ -1,4 +1,4 @@
-from newton_method import *
+from newton_method.newton_method import newton
 import math
 
 def main():

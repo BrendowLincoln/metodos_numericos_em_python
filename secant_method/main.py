@@ -1,4 +1,4 @@
-from secant_method import *
+from secant_method.secant_method import secant, isValidValues
 
 def main():
     '''

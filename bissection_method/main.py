@@ -1,4 +1,4 @@
-from bissection_method import *
+from bissection_method.bissection_method import bissection, isValidValues
 import math
 
 def main():
@@ -61,7 +61,3 @@ def main():
     print("A raiz da função é: ",  "%.4f" % result["root"])
     print("O valor da imagem chegou no erro desejado: ", "%.4f" %  result["rootImage"])
     print("Parou na interação: ", result["finalIteraction"])
-
-
-if __name__ == "__main__":
-    main()
