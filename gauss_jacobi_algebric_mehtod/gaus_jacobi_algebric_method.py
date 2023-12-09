@@ -64,7 +64,7 @@ def convergeMatrix(matrix, matrixValue):
                     biggestLineValueIndex = j
                     convergedMatrix["matrix"].insert(biggestLineValueIndex, matrixCopy[i])
                     if matrixValue != None:
-                        convergedMatrix["matrixValue"].insert(biggestLineValueIndex, matrixValueCopy[j])
+                        convergedMatrix["matrixValue"].insert(biggestLineValueIndex, matrixValueCopy[i])
                     break
 
         # Retorna a matriz convergida 

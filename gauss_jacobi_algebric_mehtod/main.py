@@ -19,7 +19,7 @@ def main():
         [1, 1, 5],
     ]
 
-    matrixValue = [16, 7]
+    matrixValue = [16, 7, 3]
 
     error = 0.01
 
