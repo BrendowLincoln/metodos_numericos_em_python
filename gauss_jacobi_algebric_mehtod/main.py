@@ -19,7 +19,7 @@ def main():
         [1, 1, 5],
     ]
 
-    matrixValue = [16, 7, 3]
+    matrixValue = [16, 7, 18]
 
     error = 0.01
 
@@ -29,8 +29,18 @@ def main():
 
     if result == None:
          return
+    
+    print("Matrix Original\n")
 
-    print(result)
+    for index, item in enumerate(matrix):
+        print(item, " = ", matrixValue[index])
+
+    print()
+
+    print("Matrix Convergida\n")
+
+    for index, item in enumerate(result["matrix"]):
+        print(item, " = ", result["matrixValue"][index])
 
 if __name__ == "__main__":
     main()

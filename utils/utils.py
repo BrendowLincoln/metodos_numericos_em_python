@@ -1,47 +1,53 @@
-def printText():
-    print("Texto")
+import sys
 
+
+#TODO: Verify error in converged matrix. First line is put in main diagonal.
 def convergeMatrix(matrix, matrixValue):
-    #Criando uma copia de matrix
-    matrixCopy = matrix
+    try:
+        #Criando uma copia de matrix
+        matrixCopy = matrix
 
-    if matrixValue != None:
-        matrixValueCopy = matrixValue
+        if matrixValue != None:
+            matrixValueCopy = matrixValue
 
-    #Pegando o tamanho da matrix
+        #Pegando o tamanho da matrix
+        if len(matrix) != len(matrixValue):
+            raise Exception("Tamanho da matriz de equações não corresponde ao tamanho da matriz de resultados das equações.")
 
-    if len(matrix) != len(matrix):
-        raise Exception("Tamanho da matriz de equações não corresponde ao tamanho da matriz de resultados das equações.")
+        matrixLength = len(matrixCopy)
 
-    matrixLength = len(matrixCopy)
+        #Convergendo a matrix
+        if matrixValue != None:
+            convergedMatrix = {
+                "matrix": [],
+                "matrixValue": []
+            }
+        else:
+            convergedMatrix = {
+                "matrix": []
+            }
 
-    #Convergendo a matrix
-    if matrixValue != None:
-        convergedMatrix = {
-            "matrix": [],
-            "matrixValue": []
-        }
-    else:
-        convergedMatrix = {
-            "matrix": []
-        }
+        biggestLineValueIndex = 0
 
-    biggestLineValueIndex = 0
+        for i in range(matrixLength):
+            for j in range(matrixLength):
+                #Pega o valor da posicao dessa linha presente na diagonal principal
+                actualLineValue = matrixCopy[i][j]
 
-    for i in range(matrixLength):
-        for j in range(matrixLength):
-            #Pega o valor da posicao dessa linha presente na diagonal principal
-            actualLineValue = matrixCopy[i][j]
+                #Faz a soma dos outros valores da linha atual, desconciderando o valor na diagonal principal
+                sumOtherValues = sum([x for x in matrixCopy[i] if x != actualLineValue])
 
-            #Faz a soma dos outros valores da linha atual, desconciderando o valor na diagonal principal
-            sumOtherValues = sum([x for x in matrixCopy[i] if x != actualLineValue])
+                if actualLineValue > sumOtherValues:
+                    biggestLineValueIndex = j
+                    convergedMatrix["matrix"].insert(biggestLineValueIndex, matrixCopy[i])
+                    if matrixValue != None:
+                        convergedMatrix["matrixValue"].insert(biggestLineValueIndex, matrixValueCopy[i])
+                    break
 
-            if actualLineValue > sumOtherValues:
-                biggestLineValueIndex = j
-                convergedMatrix["matrix"].insert(biggestLineValueIndex, matrixCopy[i])
-                if matrixValue != None:
-                    convergedMatrix["matrixValue"].insert(biggestLineValueIndex, matrixValueCopy[j])
-                break
+        # Retorna a matriz convergida 
+        return convergedMatrix
+    except Exception as e:
+        tipo, message, traceback = sys.exc_info();
 
-    # Retorna a matriz convergida 
-    return convergedMatrix
+        print(message)
+
