@@ -20,7 +20,7 @@ def secant(a, b, error, times, f):
         '''
         CALCULANDO A RAIZ
         '''
-        x2 = x1 - fX1 * ((x1 - x0)/(fX1 - fX0))
+        x2 = x1 - ((fX1 * (x1 - x0))/(fX1 - fX0))
 
         '''
         Verifca se chegou a um resultado aceitavel
