@@ -1,4 +1,13 @@
-from bissection_method.bissection_method import bissection, isValidValues
+import sys
+import os
+import math
+
+projeto_dir = os.path.dirname(os.path.abspath(__file__))
+projeto_dir = os.path.dirname(projeto_dir)
+
+sys.path.append(projeto_dir)
+
+from bissection_method import bissection, isValidValues
 import math
 
 def main():
@@ -6,7 +15,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 3) - (pow(value, 2)) + value + 1
+        return pow(value, 2) - 3
     
     '''
     Variaveis
@@ -44,7 +53,8 @@ def main():
             print("\n")
             
         except:
-            print("\nValor digitado inválido! Insira novamente\n")
+            print("\nValor digitado inválido!\n")
+            return
 
     print("| k \t| A \t\t| X \t\t| B \t\t| f(A) \t\t| f(X) \t\t| f(B) \t\t| Situação \t|")
     
@@ -61,3 +71,6 @@ def main():
     print("A raiz da função é: ",  "%.4f" % result["root"])
     print("O valor da imagem chegou no erro desejado: ", "%.4f" %  result["rootImage"])
     print("Parou na interação: ", result["finalIteraction"])
+
+if __name__ == "__main__":
+    main()
