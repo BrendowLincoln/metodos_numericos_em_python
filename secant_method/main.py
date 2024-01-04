@@ -1,11 +1,12 @@
-from secant_method.secant_method import secant
+from secant_method import secant
+import math
 
 def main():
     '''
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 3) - (pow(value, 2)) + value + 1
+        return (2 * value) * (math.cos(math.radians(2 * value))) - pow((value - 2), 2)
     
     '''
     Variaveis
@@ -34,7 +35,8 @@ def main():
             print("\n")
             
         except:
-            print("\nValor digitado inválido! Insira novamente\n")
+            print("\nValor digitado inválido!\n")
+            return
 
     print("| k \t| Xk-1 \t\t| Xk \t\t| f(Xk-1) \t| f(Xk) \t| Xk+1 \t\t| Situação \t|")
     
@@ -42,10 +44,6 @@ def main():
     Chamando o método da bissessao0
     '''
     result = secant(a, b, error, times, f)
-
-    for line in result["lines"]:
-
-        print("| ", line["count"] ,"\t|", "%.4f" % line["x0"] ,"\t| ", "%.4f" % line["x1"],"\t| ", "%.4f" % line["fX0"] ,"\t| ", "%.4f" % line["fX1"] ,"\t| ", "%.4f" % line["x2"] ,"\t| ",  line["statusMessage"] ,"\t|")
 
     for line in result["lines"]:
 
