@@ -1,14 +1,12 @@
+import copy
 import sys
 
 
-#TODO: Verify error in converged matrix. First line is put in main diagonal.
 def convergeMatrix(matrix, matrixValue):
     try:
         #Criando uma copia de matrix
-        matrixCopy = matrix
-
-        if matrixValue != None:
-            matrixValueCopy = matrixValue
+        matrixCopy = copy.deepcopy(matrix)
+        matrixValueCopy = copy.deepcopy(matrixValue)
 
         #Pegando o tamanho da matrix
         if len(matrix) != len(matrixValue):
@@ -47,7 +45,8 @@ def convergeMatrix(matrix, matrixValue):
         # Retorna a matriz convergida 
         return convergedMatrix
     except Exception as e:
-        tipo, message, traceback = sys.exc_info();
-
+        
+        _, message, __ = sys.exc_info()
         print(message)
+        return
 
