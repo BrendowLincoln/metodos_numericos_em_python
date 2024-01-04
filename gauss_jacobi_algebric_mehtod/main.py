@@ -27,20 +27,18 @@ def main():
 
     result = gaus_jacobi_algebric(matrix, matrixValue, error, times)
 
-    if result == None:
-         return
-    
-    print("Matrix Original\n")
+    if result != None:
+        print("Matrix Original\n")
 
-    for index, item in enumerate(matrix):
-        print(item, " = ", matrixValue[index])
+        for index, item in enumerate(matrix):
+            print(item, " = ", matrixValue[index])
 
-    print()
+        print()
 
-    print("Matrix Convergida\n")
+        print("Matrix Convergida\n")
 
-    for index, item in enumerate(result["matrix"]):
-        print(item, " = ", result["matrixValue"][index])
+        for index, item in enumerate(result["matrix"]):
+            print(item, " = ", result["matrixValue"][index])
 
 if __name__ == "__main__":
     main()
