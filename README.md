@@ -5,10 +5,10 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 ## Métodos existentes
 
 ### Raiz
-- [x] [Método da Bisseção](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/Metodo_Bissecao)
-- [x] [Método da Secante](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/Metodo_Secante)
-- [x] [Método de Newton](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/Metodo_Newton)
-- [ ] Método Gaus-Jacobi (Algébrico) 
+- [x] [Método da Bisseção](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/bissection_method)
+- [x] [Método da Secante](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/secant_method)
+- [x] [Método de Newton](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/newton_method)
+- [x] [Método Gaus-Jacobi (Algébrico)](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/gauss_jacobi_algebric_mehtod) 
 - [ ] Método Gaus-Jacobi (Matricial)
 - [ ] Método Gaus-Seidel (Algébrico)
 - [ ] Método Gaus-Seidel (Matricial)
