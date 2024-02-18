@@ -16,16 +16,18 @@ def main():
     matrix = [
         [10, 1, 1],
         [1, 5, 9],
-        [2, 8, -4],
+        [2, 8, -4]
     ]
 
     matrixValue = [12, 15, 6]
+
+    initial_values = [0, 0, 0]
 
     error = 0.02
 
     times = 100
 
-    results = gauss_jacobi_algebric(matrix, matrixValue, error, times)
+    results = gauss_jacobi_algebric(matrix, matrixValue, initial_values, error, times)
 
     if results != None:
         quantity_variable = len(matrix)
@@ -68,6 +70,9 @@ def main():
         
         print("\nRESULTADOS\n")
         print(final_results, "\n")
+        return
+
+    print("O sistema não gerou resultados!")
 
 if __name__ == "__main__":
     main()

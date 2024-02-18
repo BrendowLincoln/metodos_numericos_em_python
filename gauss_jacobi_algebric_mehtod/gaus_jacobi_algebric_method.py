@@ -9,7 +9,7 @@ class Equation:
         self.terms = terms
         self.solution = solution
 
-def gauss_jacobi_algebric(matrix, matrixValue, error, times):
+def gauss_jacobi_algebric(matrix, matrixValue, initial_values, error, times):
 
     # Defining the brute force stopping criterion
     BRUTE_FORCE_TIMES = times
@@ -22,7 +22,7 @@ def gauss_jacobi_algebric(matrix, matrixValue, error, times):
         matrix_length = len(converged_matrix["matrix"])
 
         # Initializing the matrix of unknowns with 0
-        iteration_variable_initial_values = [0] * matrix_length
+        iteration_variable_initial_values = initial_values
 
         # Isolating variables
         iteration_variable_results = {}
