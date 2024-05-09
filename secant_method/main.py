@@ -1,4 +1,4 @@
-from secant_method import secant
+from secant_method.secant_method import secant
 import math
 
 def main():
@@ -6,7 +6,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return (2 * value) * (math.cos(math.radians(2 * value))) - pow((value - 2), 2)
+        return pow(value, 3) - pow((6 * value), 2) + (9 * value) - 2
     
     '''
     Variaveis

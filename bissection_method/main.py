@@ -2,12 +2,7 @@ import sys
 import os
 import math
 
-projeto_dir = os.path.dirname(os.path.abspath(__file__))
-projeto_dir = os.path.dirname(projeto_dir)
-
-sys.path.append(projeto_dir)
-
-from bissection_method import bissection, isValidValues
+from bissection_method.bissection_method import bissection, isValidValues
 import math
 
 def main():
@@ -15,7 +10,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 2) - 3
+        return math.sin(math.radians(value)) - pow(value, 2)
     
     '''
     Variaveis

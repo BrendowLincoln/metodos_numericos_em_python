@@ -1,7 +1,7 @@
 bissection_method/__pycache__/
 newton_method/__pycache__/
 secant_method/__pycache__/
-gauss_jacobi_algebric_method/__pycache__/
-gauss_jacobi_algebric_mehtod/__pycache__/gaus_jacobi_algebric_method.cpython-39.pyc
+guass_jacobi_algebric_mehtod/__pycache__/
+gauss_jacobi_matrix_method/__pycache__/
 utils/__pycache__/__init__.cpython-39.pyc
 utils/__pycache__/utils.cpython-39.pyc

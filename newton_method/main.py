@@ -7,7 +7,7 @@ def main():
     '''
     def f(value):
         # return math.cos(value) - pow(value, 5)
-        return pow(value, 3) - (pow(value, 2)) + value + 1
+        return pow(value, 2) - (1/value) + 1
     
     def create_function(expression):
         def func(x):
@@ -43,7 +43,7 @@ def main():
         except:
             print("\nValor digitado inválido! Insira novamente\n")
 
-    print("| k \t| Xk \t\t| f(Xk) \t| Xk+1 \t\t| Situação \t|")
+    print("| k \t| Xk \t\t| f(Xk) \t| f'(Xk) \t| Xk+1 \t\t| Situação \t|")
     
     '''
     Chamando o método de newton
@@ -52,7 +52,7 @@ def main():
 
     for line in result["lines"]:
 
-        print("| ", line["count"] ,"\t|", "%.4f" % line["x0"] ,"\t| ", "%.4f" % line["fX0"] ,"\t| ", "%.4f" % line["x1"] ,"\t| ", line["statusMessage"] ,"\t|")
+        print("| ", line["count"] ,"\t|", "%.4f" % line["x0"] ,"\t| ", "%.4f" % line["fX0"] ,"\t| ", "%.4f" % line["f'X0"] ,"\t| ", "%.4f" % line["x1"] ,"\t| ", line["statusMessage"] ,"\t|")
 
     print("\nRESULTADOS\n")
     print("A raiz da função é: ",  "%.4f" % result["root"])

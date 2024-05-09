@@ -33,6 +33,7 @@ def newton(a, error, derivativeDelta, times, f):
             "count": count,
             "x0": x0,
             "fX0": fX0,
+            "f'X0": derivative,
             "x1": x1,
             "statusMessage": ""
         }
