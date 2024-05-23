@@ -5,10 +5,7 @@ def main():
     Funcao escolhida para gerar imagem de x
     '''
     def f(value):
-        return math.sin(math.radians(value)) - pow(value, 2)
-    
-
-    print('\n\n*** MÉTODO DA BISSEÇÃO ***\n')
+        return pow(value, 2) - pow(math.e, value) -1
 
     '''
     Variaveis iniciais
@@ -16,7 +13,7 @@ def main():
     initialValues = InitialValues()
 
     '''
-    Usando uma retentativa para erro na entrada da informação inicial!
+    Usando uma retentativa para erro na entrada da informação inici   nfasal!
     '''
     initialValues.next = True
     while initialValues.next:
@@ -100,6 +97,8 @@ def getParametersFromUer(initialValues, f):
 
 def printTableResult(result):
 
+    print('\n\n*** MÉTODO DA BISSEÇÃO ***\n')
+
     print("-------------------------------------------------------------------------------------------------------------------------")
     print("| k \t| A \t\t| X \t\t| B \t\t| f(A) \t\t| f(X) \t\t| f(B) \t\t| Situação \t|")
     print("|-----------------------------------------------------------------------------------------------------------------------|")
@@ -108,11 +107,7 @@ def printTableResult(result):
         line.printRow()
     print("-------------------------------------------------------------------------------------------------------------------------")
 
-    print("\n### RESULTADOS ###\n")
-    print(f"A raiz da função é: {result.root: .4f}")
-    print(f"O valor da imagem chegou no erro desejado: {result.rootImage: .4f}")
-    print(f"Parou na interação: {result.finalIteraction}")
-    print("-------------------------------------------------------------------------------------------------------------------------\n")
+    result.printResult
 
 class InitialValues:
     def __init__(self, a = None, b = None, error = None, times = None, next = None):
@@ -143,6 +138,14 @@ class NumericMethodResult:
             self.root = root
             self.rootImage = rootImage
             self.finalIteraction = finalIteraction
+
+
+    def printResult(self):
+        print("\n### RESULTADOS ###\n")
+        print(f"A raiz da função é: {self.root: .4f}")
+        print(f"O valor da imagem chegou no erro desejado: {self.rootImage: .4f}")
+        print(f"Parou na interação: {self.finalIteraction}")
+        print("-------------------------------------------------------------------------------------------------------------------------\n")
 
 
 if __name__ == "__main__":

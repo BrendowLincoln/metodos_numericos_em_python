@@ -5,7 +5,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return pow(value, 2) - math.sin(math.radians(value))
+        return math.sqrt(value) - math.cos(value)
     
     print('\n\n*** MÉTODO DA SECANTE ***\n')
 

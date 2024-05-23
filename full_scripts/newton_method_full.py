@@ -17,9 +17,6 @@ def main():
     '''
     Usando uma retentativa para erro na entrada da informação inicial!
     '''
-    initialValues.next = True
-    while initialValues.next:
-        getParametersFromUer(initialValues, f)
     
     '''
     Chamando o método de newton

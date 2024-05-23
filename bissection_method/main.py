@@ -10,7 +10,7 @@ def main():
     Imagem da funcao escolhida
     '''
     def f(value):
-        return math.sin(math.radians(value)) - pow(value, 2)
+        return pow((value/2), 2) - math.sin(math.radians(value))
     
     '''
     Variaveis
