@@ -4,7 +4,6 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 
 ## Métodos existentes
 
-### Raiz
 - [x] [Método da Bisseção](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/bissection_method)
 - [x] [Método da Secante](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/secant_method)
 - [x] [Método de Newton](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/newton_method)
@@ -17,3 +16,8 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 - [x] [Método Integração Numérica - Retângulos](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/rectangle_method)
 - [ ] Método Integração Numérica - Trapézios
 - [ ] Método Integração Numérica - Simpson
+
+
+> ### Observação
+>
+> Dentro do repositório existe uma pasta criada com os códigos de cada método em um único scripts, separados por métodos. Caso queira acesar clique [aqui](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/full_scripts)
