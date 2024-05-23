@@ -14,6 +14,6 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 - [ ] Método Gaus-Seidel (Matricial)
 - [ ] Método Interpolação Polinomil - Lagrange
 - [ ] Método Ajuste de Curva - Minimos Quadrados
-- [ ] Método Integração Numérica - Retângulos
+- [x] [Método Integração Numérica - Retângulos](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/rectangle_method)
 - [ ] Método Integração Numérica - Trapézios
 - [ ] Método Integração Numérica - Simpson
