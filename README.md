@@ -20,4 +20,4 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 
 > ### Observação
 >
-> Dentro do repositório existe uma pasta criada com os códigos de cada método em um único scripts, separados por métodos. Caso queira acesar clique [aqui](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/full_scripts)
+> Dentro do repositório existe uma pasta criada com os códigos de cada método em um único scripts, separados por métodos. Clique [aqui](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/full_scripts) para acessar.
