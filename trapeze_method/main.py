@@ -8,7 +8,7 @@ def main():
     Função da integral
     '''
     def f(value):
-        return 1/value
+        return value * math.log(value)
 
     # Mostrando cabeçalho do programa
     print('\n\n*** MÉTODO DE INTEGRAÇÃO: TRAPÉZIO ***\n')
