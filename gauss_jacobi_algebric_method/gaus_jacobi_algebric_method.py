@@ -1,6 +1,4 @@
-import sys
 import copy
-from typing import List
 
 from equation import Equation
 from matrix import Matrix
