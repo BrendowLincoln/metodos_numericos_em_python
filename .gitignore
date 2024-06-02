@@ -5,3 +5,5 @@ gauss_jacobi_algebric_method/__pycache__
 trapeze_method/__pycache__
 rectangle_method/__pycache__
 simpson_method/__pycache__
+
+.vscode/
