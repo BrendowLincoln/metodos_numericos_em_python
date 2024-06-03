@@ -2,6 +2,7 @@ bissection_method/__pycache__
 newton_method/__pycache__
 secant_method/__pycache__
 gauss_jacobi_algebric_method/__pycache__
+gauss_seidel_algebric_method/__pycache__
 trapeze_method/__pycache__
 rectangle_method/__pycache__
 simpson_method/__pycache__
