@@ -34,6 +34,7 @@ def gaussSeidelAlgebric(initialValues: InitialValue):
                 # Definindo o nome da variável que será adicionada no objeto resultado
                 unknown_key = f'x{(j + 1)}'
 
+                # Repassando os valores das variaveis calculadas nessa interação para o calculo da variavel atual
                 for index, value in enumerate(line.unknowns.values()):
                     unknownValuesIteration[index] = value
 
