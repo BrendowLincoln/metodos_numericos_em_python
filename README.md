@@ -9,7 +9,7 @@ Repositório com códigos para a resolução de métodos numéricos utilizando a
 - [x] [Método de Newton](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/newton_method)
 - [x] [Método Gaus-Jacobi (Algébrico)](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/gauss_jacobi_algebric_method) 
 - [ ] Método Gaus-Jacobi (Matricial)
-- [ ] Método Gaus-Seidel (Algébrico)
+- [ ] [Método Gaus-Seidel (Algébrico)](https://github.com/BrendowLincoln/metodos_numericos_em_python/tree/main/gauss_seidel_algebric_method)
 - [ ] Método Gaus-Seidel (Matricial)
 - [ ] Método Interpolação Polinomil - Lagrange
 - [ ] Método Ajuste de Curva - Minimos Quadrados
